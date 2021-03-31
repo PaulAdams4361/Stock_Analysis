@@ -49,7 +49,7 @@ class AlphaVantage_SMA:
                 os.mkdir(make)
                 
             
-        self.api_key = 'Q9Z6V3UUA3TSDBNQ'
+        self.api_key = ''
         
     def get_nasdaq(self):
         path = self.dirlocation
@@ -92,7 +92,7 @@ class AlphaVantage_SMA:
         
         def simple_moving_average_daily(symbols, time_period): # right now, time_period = 7 for a 7-day moving average for a few weeks' of trading
         #def simple_moving_average_daily(symbols): # right now, time_period = 7 for a 7-day moving average for a few weeks' of trading
-            api_url = 'https://www.alphavantage.co/query?function=SMA&symbol={}&interval=daily&time_period=7&series_type=high&apikey=Q9Z6V3UUA3TSDBNQ'.format(symbols)
+            api_url = 'https://www.alphavantage.co/query?function=SMA&symbol={}&interval=daily&time_period=7&series_type=high&apikey='.format(symbols)
             results = []
             response = requests.get(api_url)
             if response.status_code == requests.codes.ok:
